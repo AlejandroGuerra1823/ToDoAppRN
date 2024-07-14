@@ -1,22 +1,40 @@
-// In App.js in a new project
-
 import * as React from 'react';
-import { View, Text } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { PrincipalScreen } from './src/Screens/PrincipalScreen';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-
+import {CategoriesScreen} from './src/Screens/CategoriesScreen';
+import {PrincipalScreen} from './src/Screens/Principal/PrincipalScreen';
+import {GlobalContextProvider} from './src/Context/GlobalContext';
 
 const Stack = createNativeStackNavigator();
 
 function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="PrincipalScreen" component={PrincipalScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <GlobalContextProvider>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="PrincipalScreen">
+          <Stack.Screen
+            name="PrincipalScreen"
+            component={PrincipalScreen}
+            options={{
+              title: 'Notes to do!',
+              headerStyle: {
+                backgroundColor: '#f4511e',
+              },
+              headerTintColor: '#fff',
+              headerTitleStyle: {
+                fontWeight: 'bold',
+              },
+            }}
+          />
+          <Stack.Screen
+            name="CategoriesScreen"
+            component={CategoriesScreen}
+            options={{title: 'Categories to choose!'}}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </GlobalContextProvider>
   );
 }
 

@@ -1,0 +1,15 @@
+{
+    "cSpell.language": "en,es-ES",
+    "js/ts.implicitProjectConfig.checkJs": true,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit"
+    },
+    "editor.tabSize": 2,
+    "files.autoSave": "off",
+    "commentTranslate.targetLanguage": "es",
+    "files.eol": "\n",
+    "cSpell.includeRegExpList": ["CStyleComment", "string"],
+    "cSpell.words": ["aplent"]
+  }
+  
