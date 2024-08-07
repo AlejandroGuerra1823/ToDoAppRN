@@ -1,6 +1,7 @@
 import React from 'react';
 import {StatusBar, Text, TouchableOpacity, View} from 'react-native';
 import {styles} from './PrincipalScreenStyles';
+import {t} from '../../i18N/i18next';
 
 export const PrincipalScreen = ({navigation}) => {
   return (
@@ -10,7 +11,7 @@ export const PrincipalScreen = ({navigation}) => {
       <TouchableOpacity
         style={styles.buttonContainer}
         onPress={() => navigation.navigate('CategoriesScreen')}>
-        <Text> tocame</Text>
+        <Text> {t('UserPetitionNameLabel')}</Text>
       </TouchableOpacity>
     </View>
   );
