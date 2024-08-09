@@ -5,11 +5,9 @@ import IntroScreen from './src/Screens/Intro/IntroScreen';
 
 function App() {
   return (
-    <GlobalContextProvider>
-      <NavigationContainer>
-        <IntroScreen />
-      </NavigationContainer>
-    </GlobalContextProvider>
+    // <NavigationContainer>
+    <IntroScreen />
+    // </NavigationContainer>
   );
 }
 

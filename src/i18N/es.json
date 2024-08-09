@@ -1,4 +1,5 @@
 {
   "welcomeTitle": "Bienvenido",
-  "UserPetitionNameLabel": "Ingresa tu nombre para continuar"
+  "userPetitionNameLabel": "Ingresa tu nombre para continuar",
+  "enterNameText": "Ingresa tu nombre"
 }
